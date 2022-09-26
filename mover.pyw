@@ -3,6 +3,8 @@ from zipfile import ZipFile
 import time
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
+
+
 # add source and destination directories ex. C:\\Users\\...
 source_dir = ""
 dest_lec = ""
@@ -29,7 +31,7 @@ class Mover(FileSystemEventHandler):
                     zip_ref.extractall(dest_ass)
 
                 zip_ref.close()
-                #delete zip folder when you've extracted it
+                #delete zip folder when you've extracted i
                 remove(entry)
 
 #trying to add code that deletes __MACOSX folder
